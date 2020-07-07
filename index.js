@@ -14,7 +14,7 @@ app.use('/articles', typeChecker);
 
 app.post('/articles', (req, res) => {
 	const pages = req.body.pages;
-	getAllArticles(1, pages)
+	getAllArticles(0, pages)
 		.then(articles => {
 			res.json({ articles });
 		})
